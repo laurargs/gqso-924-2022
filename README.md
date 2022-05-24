@@ -3,6 +3,3 @@
 Esse Projeto visa praticar conceitos de gestão e qualidade de software
 
 Teste da Laura
-
-
-
