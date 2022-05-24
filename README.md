@@ -2,5 +2,7 @@
 
 Esse Projeto visa praticar conceitos de gestão e qualidade de software
 
-Teste do arquivo.
+Nova mudança
+
+O projeto tem como objetivo desenvolver uma calculadora.
 
