@@ -7,23 +7,30 @@ import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-public class IndexHandler implements HttpHandler {
 
-    public static final String PATH = "/";
+public class MultiplicacaoHandler implements HttpHandler {
+
+    public static final String PATH = "/mult";
 
     @Override
     public void handle(HttpExchange conn) throws IOException {
-        byte[] mensagem = "Seja bem-vindo(a) a API Calculadora! Temos o seguinte endpoint: /mult".getBytes();
+        
+        String[] partes = conn.getRequestURI().getPath().split("/");
+
+        String parametro1 = partes[2]; 
+        String parametro2 = partes[3]; 
+      
+        byte[] result = calculateResponse(parametro1, parametro2);
 
         try {
-            
-            conn.sendResponseHeaders(HTTP_OK, mensagem.length);
+           
+            conn.sendResponseHeaders(HTTP_OK, result.length);
 
             Headers headers = conn.getResponseHeaders();
             headers.add("Content-Type", "text/html; charset=UTF-8");
-            
+
             try (OutputStream out = conn.getResponseBody()) {
-                out.write(mensagem);
+                out.write(result);
             } catch (IOException ioe) {
                 ioe.printStackTrace();
             }
@@ -32,5 +39,15 @@ public class IndexHandler implements HttpHandler {
         } finally {
             conn.close();
         }
+    }
+
+    byte[] calculateResponse(String parametro1, String parametro2) {
+      
+        double Num1 = Double.parseDouble(parametro1);
+        double Num2 = Double.parseDouble(parametro2);
+
+        double mult = Num1*Num2;
+        
+        return Double.toString(mult).getBytes();
     }
 }
