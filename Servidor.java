@@ -1,11 +1,6 @@
-import static java.net.HttpURLConnection.HTTP_OK;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
-import java.io.OutputStream;
-import com.sun.net.httpserver.Headers;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 
 import com.sun.net.httpserver.HttpServer;
 
@@ -25,5 +20,4 @@ public class Servidor {
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());
     }
 }
-
 
