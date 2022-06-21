@@ -8,9 +8,9 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 
-public class DivisaoHandler implements HttpHandler {
+public class MultiplicacaoHandler implements HttpHandler {
 
-    public static final String PATH = "/div";
+    public static final String PATH = "/mult";
 
     @Override
     public void handle(HttpExchange conn) throws IOException {
@@ -46,8 +46,8 @@ public class DivisaoHandler implements HttpHandler {
         double Num1 = Double.parseDouble(parametro1);
         double Num2 = Double.parseDouble(parametro2);
 
-        double div = Num1/Num2;
+        double mult = Num1*Num2;
         
-        return Double.toString(div).getBytes();
+        return Double.toString(mult).getBytes();
     }
 }
