@@ -43,8 +43,8 @@ public class MultiplicacaoHandler implements HttpHandler {
 
     byte[] calculateResponse(String parametro1, String parametro2) {
       
-        double Num1 = Double.parseDouble(parametro1);
-        double Num2 = Double.parseDouble(parametro2);
+        double Carac1 = Double.parseDouble(parametro1);
+        double Carac2 = Double.parseDouble(parametro2);
 
         double mult = Num1*Num2;
         
