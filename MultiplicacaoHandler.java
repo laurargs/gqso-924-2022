@@ -8,9 +8,9 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 
-public class Subtração implements HttpHandler {
+public class MultiplicacaoHandler implements HttpHandler {
 
-    public static final String PATH = "/sub";
+    public static final String PATH = "/mult";
 
     @Override
     public void handle(HttpExchange conn) throws IOException {
@@ -43,11 +43,11 @@ public class Subtração implements HttpHandler {
 
     byte[] calculateResponse(String parametro1, String parametro2) {
       
-        double Num1 = Double.parseDouble(parametro1);
-        double Num2 = Double.parseDouble(parametro2);
+        double Carac1 = Double.parseDouble(parametro1);
+        double Carac2 = Double.parseDouble(parametro2);
 
-        double sub = Num1-Num2;
+        double mult = Carac1*Carac2;
         
-        return Double.toString(sub).getBytes();
+        return Double.toString(mult).getBytes();
     }
 }
