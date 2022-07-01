@@ -15,6 +15,10 @@ public class Servidor {
         server.setExecutor(Executors.newSingleThreadExecutor());
 
         server.createContext(IndexHandler.PATH, new IndexHandler());
+       
+        server.createContext(SomaHandler.PATH, new SomaHandler());
+      
+        server.createContext(Subtração.PATH, new Subtração());
 
         server.createContext(DivisaoHandler.PATH, new DivisaoHandler());
       
