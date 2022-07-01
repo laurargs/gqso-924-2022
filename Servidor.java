@@ -19,6 +19,8 @@ public class Servidor {
         server.createContext(SomaHandler.PATH, new SomaHandler());
       
         server.createContext(Subtração.PATH, new Subtração());
+       
+        server.createContext(MultiplicacaoHandler.PATH, new MultiplicacaoHandler());
 
         server.createContext(DivisaoHandler.PATH, new DivisaoHandler());
       
