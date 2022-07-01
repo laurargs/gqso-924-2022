@@ -13,7 +13,7 @@ public class IndexHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange conn) throws IOException {
-        byte[] mensagem = "Seja bem-vindo(a) a API Calculadora! Temos o seguinte endpoint: /mult".getBytes();
+        byte[] mensagem = "Seja bem-vindo(a) a API Calculadora! Temos os seguintes endpoints: /soma /sub /div /mult".getBytes();
 
         try {
             
