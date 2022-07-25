@@ -5,8 +5,8 @@ import io.jooby.Jooby;
 public class App extends Jooby {
 
   {
-    get("/", ctx -> "Chupa Javascript!");
-    mvc(new Raiz());
+    get("/", ctx -> "Bem-vindo a API Calculadora!");
+    
     get("/div", ctx -> "Divisão!");
     mvc(new Divisao());
   }
