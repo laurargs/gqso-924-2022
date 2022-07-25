@@ -46,7 +46,7 @@ public class DivisaoHandler implements HttpHandler {
         double Carac1 = Double.parseDouble(parametro1);
         double Carac2 = Double.parseDouble(parametro2);
 
-        double mult = Carac1/Carac2;
+        double div = Carac1/Carac2;
         
         return Double.toString(div).getBytes();
     }
