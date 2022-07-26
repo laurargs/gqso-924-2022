@@ -9,7 +9,7 @@ import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
-public class DivisaoTest {
+public class AdicaoTest {
 
     @Test
     public void Adicao1() {
@@ -24,7 +24,7 @@ public class DivisaoTest {
     public void Adicao2() {
         MockRouter router = new MockRouter(new App());
         router.get("/soma/16/4", rsp -> {
-            assertEquals(20, rsp.value());
+            assertEquals(20.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
