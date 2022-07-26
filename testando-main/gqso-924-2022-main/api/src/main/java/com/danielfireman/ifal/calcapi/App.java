@@ -6,7 +6,7 @@ public class App extends Jooby {
 
   {
     get("/", ctx -> "Bem-vindo a API Calculadora!");
-    mvc(new Adicao());
+    mvc(new Divisao());
   }
 
   public static void main(final String[] args) {
