@@ -9,38 +9,38 @@ import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
-public class AdicaoTest {
+public class MultiplicacaoTest {
 
     @Test
-    public void Adicao1() {
+    public void Multiplicacao1() {
         MockRouter router = new MockRouter(new App());
-        router.get("/soma/4/2", rsp -> {
+        router.get("/mult/4/2", rsp -> {
             assertEquals(6.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
 
     @Test
-    public void Adicao2() {
+    public void Multiplicacaoo2() {
         MockRouter router = new MockRouter(new App());
-        router.get("/soma/16/4", rsp -> {
+        router.get("/mult/16/4", rsp -> {
             assertEquals(20.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
 
     @Test
-    public void Adicao3() {
+    public void Multiplicacao3() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/soma/aa/2", rsp -> {});
+            router.get("/mult/aa/2", rsp -> {});
         });
     }
     @Test
-    public void Adicao4() {
+    public void Multiplicacao() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/soma/8,5/2", rsp -> {});
+            router.get("/mult/8,5/2", rsp -> {});
         });
     }
 
