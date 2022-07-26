@@ -30,14 +30,14 @@ public class DivisaoTest {
     }
 
     @Test
-    public void Divisao6() {
+    public void Divisao3() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
             router.get("/div/aa/2", rsp -> {});
         });
     }
     @Test
-    public void Divisao7() {
+    public void Divisao4() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
             router.get("/div/8,5/2", rsp -> {});
