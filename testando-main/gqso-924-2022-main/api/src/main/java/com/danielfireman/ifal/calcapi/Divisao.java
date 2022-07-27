@@ -9,7 +9,7 @@ import io.jooby.exception.BadRequestException;
 public class Divisao {
 
     @GET
-    public double calculaRaiz(@PathParam("p1") Double p1, @PathParam("p2") Double p2) {
+    public double CalculaDivisao(@PathParam("p1") Double p1, @PathParam("p2") Double p2) {
 
         try {
             double div = p1/p2;
