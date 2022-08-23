@@ -6,8 +6,10 @@ public class App extends Jooby {
 
   {
     get("/", ctx -> "Bem-vindo a API Calculadora!");
-    mvc(new Multiplicacao());
+    mvc(new Adicao());
     mvc(new Subtracao());
+    mvc(new Multiplicacao());
+    mvc(new Divisao());
 
   }
 
