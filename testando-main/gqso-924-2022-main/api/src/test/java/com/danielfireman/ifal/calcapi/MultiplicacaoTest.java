@@ -15,7 +15,7 @@ public class MultiplicacaoTest {
     public void Multiplicacao1() {
         MockRouter router = new MockRouter(new App());
         router.get("/mult/4/2", rsp -> {
-            assertEquals(6.0, rsp.value());
+            assertEquals(8.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
@@ -24,7 +24,7 @@ public class MultiplicacaoTest {
     public void Multiplicacaoo2() {
         MockRouter router = new MockRouter(new App());
         router.get("/mult/16/4", rsp -> {
-            assertEquals(20.0, rsp.value());
+            assertEquals(64.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
