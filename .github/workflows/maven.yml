@@ -23,6 +23,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file api/pom.xml
+      run: mvn -B package --file testando-main/gqso-924-2022-main/api/pom.xml
     - name: Testes with Maven
-      run: mvn test --file api/pom.xml
+      run: mvn test --file testando-main/gqso-924-2022-main/api/pom.xml
